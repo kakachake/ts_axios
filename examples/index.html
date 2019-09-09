@@ -1,0 +1,25 @@
+<!--
+ * @Description: 
+ * @Version: 2.0
+ * @Autor: kakachake
+ * @Date: 2019-08-21 12:01:16
+ * @LastEditors: kakachake
+ * @LastEditTime: 2019-08-21 16:18:59
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="stylesheet" href="/global.css">
+  </head>
+  <body style="padding: 0 20px">
+    <h1>ts-axios examples</h1>
+    <ul>
+        <% for(var i=0;i<htmlWebpackPlugin.options.title.length;i++){ %> 
+            <li><a href="../<%= htmlWebpackPlugin.options.title[i] %>"><%= htmlWebpackPlugin.options.title[i] %></a></li>
+        <% } %>
+      
+    </ul>
+  </body>
+</html>
