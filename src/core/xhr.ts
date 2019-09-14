@@ -4,15 +4,15 @@
  * @Autor: kakachake
  * @Date: 2019-08-21 11:36:21
  * @LastEditors: kakachake
- * @LastEditTime: 2019-09-10 23:22:13
+ * @LastEditTime: 2019-09-14 10:43:55
  */
 import {AxiosRequestConfig, AxiosPromise, AxiosResponse} from './types'
 
-import { parseHeaders } from './helpers/headers'
+import { parseHeaders } from '../helpers/headers'
 
-import { createError } from './helpers/error'
+import { createError } from '../helpers/error'
 
-import { transformResponse } from './helpers/data'
+import { transformResponse } from '../helpers/data'
 
 export default function xhr(config: AxiosRequestConfig): AxiosPromise {
     return new Promise((resolve, reject)=>{  //返回一个promise

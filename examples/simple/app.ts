@@ -4,7 +4,7 @@
  * @Autor: kakachake
  * @Date: 2019-08-21 12:04:58
  * @LastEditors: kakachake
- * @LastEditTime: 2019-09-09 20:21:07
+ * @LastEditTime: 2019-09-10 17:43:15
  */
 import axios from '../../src/index'
 
@@ -15,16 +15,22 @@ axios({
     a: 1,
     b: 2
   }
+}).then((res)=>{
+  console.log(res);
 })
 
 
 axios({
   method: 'get',
   url: '/base/get',
+  responseType:'json',
   params: {
     foo: ['bar', 'baz']
   }
+}).then((res)=>{
+  console.log(res);
 })
+
 
 axios({
   method: 'get',
@@ -92,7 +98,8 @@ axios({
   method: 'post',
   url: '/base/post',
   headers: {
-    'content-type': 'application/json;charset=utf-8'
+    'Content-Type': 'application/json;charset=utf-8',
+    'Accept': 'application/json, text/plain, */*'
   },
   data: {
     a: 1,
